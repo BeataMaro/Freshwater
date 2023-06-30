@@ -1,5 +1,16 @@
 @import '../../variables.scss';
 
-h1 {
-    color: $main;
+.logo {
+  display: flex;
+  align-items: center;
+
+  .logo-icon {
+    margin-right: 0.4rem;
+    width: 36px;
+    height: 36px;
+  }
+  .logo-text {
+    font-family: 'Questrial', sans-serif;
+    color: $blue;
+  }
 }
