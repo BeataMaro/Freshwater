@@ -40,7 +40,8 @@ body {
     }
     aside {
       width: 100%;
-      padding: 7px 20vw;
+      background-color: #eff0f5;
+      padding: .5rem 20vw;
       margin-bottom: 1.44rem;
       text-align: center;
       @media (min-width: $desktop) {
