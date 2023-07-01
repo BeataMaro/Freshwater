@@ -6,6 +6,41 @@
     <title>Freshwater</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="wrapper">
+      <aside class="center"><p>Tylko dzisiaj!&nbsp;Darmowa&nbsp;dostawa dla&nbsp;zamówień&nbsp;od&nbsp;100zł</p></aside>
+      <header>
+        <div class="logo">
+          <img src="./images/logo-icon.svg" alt="Freshwater logo icon" class="logo-icon" />
+          <h1 class="logo-text">Freshwater</h1>
+        </div>
+        <form action="POST" name="search-form">
+          <input type="search" name="search-input" placeholder="Wpisz czego szukasz" />
+          <button type="submit" class="search-btn">
+            <img src="./images/search.svg" alt="magnifier icon" />
+          </button>
+        </form>
+        <nav>
+          <ul class="menu">
+            <li class="desktop"><img src="./images/user.svg" alt="user account icon" /></li>
+            <li class="desktop">
+              <div class="menu-icon">
+                <img src="./images/heart.svg" alt="favourites heart icon" />
+              </div>
+            </li>
+            <li>
+              <div class="menu-icon">
+                <img src="./images/shopping-cart.svg" alt="shopping cart icon" class="menu-icon" />
+              </div>
+              <span>0,00zł</span>
+            </li>
+          </ul>
+          <img src="./images/menu.svg" alt="hamburger-menu" class="ham-menu" role="button" />
+        </nav>
+      </header>
+      <main>
+        <section></section>
+      </main>
+      <footer></footer>
+    </div>
   </body>
 </html>

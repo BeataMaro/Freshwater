@@ -1,6 +1,7 @@
 import './style.scss';
-import HeaderComponent from './components/headerComponent/header';
+// import './components/headerComponent/header.scss';
+// import HeaderComponent from './components/headerComponent/header';
 
 const app = document.getElementById('app');
 
-app.appendChild(HeaderComponent());
+// app.appendChild(HeaderComponent());
