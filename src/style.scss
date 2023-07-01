@@ -32,23 +32,52 @@ body {
   min-width: 375px;
   height: 100vh;
 
-  .wrapper {
-    max-width: 1226px;
-    @media (min-width: $desktop) {
-      margin: 0 18vw;
-      height: 100vh;
+  aside {
+    width: 100vw;
+    background-color: #eff0f5;
+    padding: 0.5rem 18vw;
+    margin-bottom: 1.44rem;
+    text-align: center;
+
+    p {
+      font-size: 0.88rem;
     }
-    aside {
-      width: 100%;
-      background-color: #eff0f5;
-      padding: .5rem 20vw;
-      margin-bottom: 1.44rem;
-      text-align: center;
-      @media (min-width: $desktop) {
-        padding: 0.44rem;
+  }
+  section.benefits {
+    width: 100vw;
+    background-color: $blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 18vw;
+
+    & .benefit {
+      @extend .center;
+      padding: 1.5rem;
+      flex-basis: 50%;
+      display: grid;
+      gap: 0.94rem;
+      place-items: center;
+
+      @media (min-width: 1580px) {
+        flex-basis: 25%;
+        gap: 0;
+        display: flex;
       }
-      p {
-        font-size: 0.88rem;
+
+      & .benefits-icon {
+        margin-bottom: 0.62rem;
+
+        @media (min-width: 1580px) {
+          margin-bottom: 0;
+          margin-right: 0.94rem;
+        }
+      }
+      & strong {
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-align: center;
       }
     }
   }

@@ -4,12 +4,12 @@ header {
   .row-up {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 15px;
+    width: 100vw;
     margin-bottom: 2.4rem;
-
+    padding: 0 0.94rem;
+    
     @media (min-width: $desktop) {
-      padding: 0;
+      padding: 0 18vw;
     }
 
     .logo {
@@ -66,7 +66,7 @@ header {
         border-radius: 18px;
         display: none;
 
-        @media (min-width: $desktop) {
+        @media (min-width: 1580px) {
           display: inline;
           $mobile: false;
         }
@@ -148,13 +148,15 @@ header {
 
     @media (min-width: 1580px) {
       display: block;
+      width: 100vw;
+      padding: 0 18vw;
+      background-color: #eff0f5;
     }
     nav {
       .products-menu {
         display: flex;
         align-items: center;
-        background-color: #eff0f5;
-        padding: 0.625rem;
+        padding: 0.625rem 0;
         width: 100%;
         position: relative;
 
@@ -214,6 +216,7 @@ header {
         opacity: 0;
         position: absolute;
         top: 2.2rem;
+        background-color: white;
         border-radius: 0.5rem;
         width: 205px;
         padding: 1.25rem;
