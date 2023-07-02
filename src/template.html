@@ -7,9 +7,9 @@
   </head>
   <body>
     <div id="app">
-    <aside class="center">
-      <p>Tylko dzisiaj!&nbsp;Darmowa&nbsp;dostawa dla&nbsp;zamówień&nbsp;od&nbsp;100zł</p>
-    </aside>
+      <aside class="center">
+        <p>Tylko dzisiaj!&nbsp;Darmowa&nbsp;dostawa dla&nbsp;zamówień&nbsp;od&nbsp;100zł</p>
+      </aside>
       <header>
         <div class="row-up">
           <a href="/">
@@ -18,7 +18,7 @@
               <h1 class="logo-text">Freshwater</h1>
             </div>
           </a>
-          <form action="POST" name="search-form">
+          <form action="POST" name="searchForm">
             <input type="search" name="search-input" placeholder="Wpisz czego szukasz" />
             <button type="submit" class="search-btn">
               <img src="./images/search.svg" alt="magnifier icon" />
@@ -43,7 +43,13 @@
                 <span>0,00zł</span>
               </li>
             </ul>
-            <img src="./images/menu.svg" alt="hamburger-menu" class="ham-menu" role="button" />
+            <img
+              src="./images/menu.svg"
+              alt="hamburger-menu"
+              class="ham-menu"
+              id="ham-menu"
+              role="button"
+            />
           </nav>
         </div>
         <div class="row-down">
@@ -51,8 +57,13 @@
             <ul class="products-menu">
               <li class="extensible extensible-1">
                 <div class="category">
-                  <span>Do lodówek</span
-                  ><img src="./images/arrow-down.svg" alt="arrow-down" class="arrow-down" />
+                  <span>Do lodówek</span>
+                  <img src="./images/arrow-down.svg" alt="arrow down" class="arrow-down desktop" />
+                  <img
+                    src="./images/blue-arrow-right.svg"
+                    alt="blue arrow right"
+                    class="arrow-right"
+                  />
                 </div>
                 <div class="extensible-menu menu-1">
                   <h3>Filtry wody do lodówek</h3>
@@ -69,7 +80,12 @@
               <li class="extensible extensible-2">
                 <div class="category">
                   <span>Do ekspresów</span
-                  ><img src="./images/arrow-down.svg" alt="arrow-down" class="arrow-down" />
+                  ><img src="./images/arrow-down.svg" alt="arrow-down" class="arrow-down desktop" />
+                  <img
+                    src="./images/blue-arrow-right.svg"
+                    alt="blue arrow right"
+                    class="arrow-right"
+                  />
                 </div>
 
                 <div class="extensible-menu menu-2">
@@ -87,7 +103,12 @@
               <li class="extensible extensible-3">
                 <div class="category">
                   <span>Dzbanki, butelki i&nbsp;wkłady filtrujące</span>
-                  <img src="./images/arrow-down.svg" alt="arrow-down" class="arrow-down" />
+                  <img src="./images/arrow-down.svg" alt="arrow-down" class="arrow-down desktop" />
+                  <img
+                    src="./images/blue-arrow-right.svg"
+                    alt="blue arrow right"
+                    class="arrow-right"
+                  />
                 </div>
                 <div class="extensible-menu menu-3">
                   <h3>Filtry wody do dzbanków, butelek i&nbsp;wkładów filtrujących</h3>
@@ -107,18 +128,64 @@
             </ul>
           </nav>
         </div>
+        <div class="mobile-menu mobile">
+          <form action="POST" name="searchForm2">
+            <input type="search" name="search-input" placeholder="Wpisz czego szukasz" />
+            <button type="submit" class="search-btn">
+              <img src="./images/magnifier-black.svg" alt="magnifier icon" />
+            </button>
+          </form>
+          <nav>
+            <ul>
+              <li>
+                <img src="./images/user-filled.svg" alt="user filled icon" /><span
+                  >Zaloguj się</span
+                >
+              </li>
+              <li>
+                <img src="./images/padlock.svg" alt="padlock icon" /><span>Zarejestruj się</span>
+              </li>
+              <li>
+                <img src="./images/globe.svg" alt="globe icon" /><span
+                  >Sprawdź status zamówienia</span
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <main>
-        <section class="hero-slider"></section>
+        <section id="hero-slider" class="hero-slider"></section>
         <section class="benefits">
-          <div class="benefit"><img src="./images/trophy.svg" alt="trophy icon" class="benefits-icon" /><strong>Najszybsza dostawa</strong></div>
-          <div class="benefit"><img src="./images/return icon.svg" alt="return arrow icon" class="benefits-icon" /><strong>Aż 180 dni na&nbsp;zwrot</strong></div>
-          <div class="benefit"><img src="./images/professional advice.svg" alt="professional advice" class="benefits-icon" /><strong>Profesjonalne doradztwo</strong></div>
-          <div class="benefit"><img src="./images/arrow.svg" alt="arrow icon" class="benefits-icon" /><strong>Darmowa dostawa od&nbsp;200zł</strong></div>
+          <div class="benefit">
+            <img src="./images/trophy.svg" alt="trophy icon" class="benefits-icon" /><strong
+              ><span class="mobile">Okazyjne ceny</span
+              ><span class="desktop">Najszybsza dostawa</span></strong
+            >
+          </div>
+          <div class="benefit">
+            <img
+              src="./images/return icon.svg"
+              alt="return arrow icon"
+              class="benefits-icon"
+            /><strong>Aż 180 dni na&nbsp;zwrot</strong>
+          </div>
+          <div class="benefit">
+            <img
+              src="./images/professional advice.svg"
+              alt="professional advice"
+              class="benefits-icon"
+            /><strong>Profesjonalne doradztwo</strong>
+          </div>
+          <div class="benefit">
+            <img src="./images/arrow.svg" alt="arrow icon" class="benefits-icon" /><strong
+              ><span>Darmowa dostawa od&nbsp;</span><span class="desktop">200zł</span
+              ><span class="mobile">50zł</span></strong
+            >
+          </div>
         </section>
       </main>
       <footer></footer>
     </div>
-
   </body>
 </html>

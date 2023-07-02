@@ -1,7 +1,13 @@
 import './style.scss';
-// import './components/headerComponent/header.scss';
-// import HeaderComponent from './components/headerComponent/header';
 
-const app = document.getElementById('app');
+const BODY = document.body;
 
-// app.appendChild(HeaderComponent());
+// open hamburger menu
+const hamburgerMenu = document.getElementById('ham-menu');
+hamburgerMenu.addEventListener('click', () => BODY.classList.toggle('open'));
+
+
+// prevent form submitting
+const forms = document.querySelectorAll('form');
+[...forms].map((form) => form.addEventListener('submit', (e) => e.preventDefault()));
+
