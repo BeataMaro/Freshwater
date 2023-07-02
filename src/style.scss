@@ -2,6 +2,7 @@
 @import './variables.scss';
 @import './components/headerComponent/header.scss';
 @import './components/heroComponent/hero.scss';
+@import './components/newsletterComponent/newsletter.scss';
 
 * {
   margin: 0;
@@ -32,6 +33,7 @@ button {
 body {
   min-width: 375px;
   height: 100vh;
+  overflow-x: hidden;
 
   &.open .mobile-menu {
     display: grid;
@@ -44,6 +46,20 @@ body {
   &.open nav .products-menu li {
     color: $blue;
     border-bottom: 1px solid #eceef3;
+  }
+
+  .desktop {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  .mobile {
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 
   aside {
@@ -64,8 +80,8 @@ body {
     color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
-    @media (min-width: $tablet) {
+
+    @media (min-width: $desktop) {
       grid-template-columns: repeat(4, 1fr);
       padding: 0 20vw;
     }
@@ -74,15 +90,16 @@ body {
       padding: 1.5rem;
       display: grid;
       place-items: center;
+      border: 1px solid rebeccapurple;
 
-      @media (min-width: $tablet) {
+      @media (min-width: $desktop) {
         display: flex;
       }
 
       & .benefits-icon {
         margin-bottom: 0.62rem;
 
-        @media (min-width: $tablet) {
+        @media (min-width: $desktop) {
           margin-bottom: 0;
           margin-right: 0.94rem;
         }
@@ -92,22 +109,9 @@ body {
         font-weight: 700;
         text-align: center;
 
-        & span {
-          text-align: center;
-          
-          &.mobile {
-            @media (min-width: $tablet) {
-              display: none;
-            }
-          }
-          
-          &.desktop {
-            display: none;
-            @media (min-width: $tablet) {
-              display: inline;
-            }
-          }
-        }
+        // & span {
+        //   text-align: center;
+        // }
       }
     }
   }
