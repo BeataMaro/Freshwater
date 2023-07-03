@@ -31,10 +31,10 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
-      {
-        test: /\.(css)$/,
-        use: ['style-loader', 'css-loader'],
-      },
+      // {
+      //   test: /\.(css)$/,
+      //   use: ['style-loader', 'css-loader'],
+      // },
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
