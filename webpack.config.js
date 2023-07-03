@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     filename: '[name].[contenthash].js',
@@ -30,6 +30,10 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: 'html-loader',
+      },
+      {
+        test: /\.(css)$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
