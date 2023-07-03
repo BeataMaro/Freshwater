@@ -136,8 +136,6 @@ footer {
         }
       }
       .extensible {
-        display: flex;
-        justify-content: space-between;
         padding: 1.25rem 0;
         border-bottom: 1px solid white;
         cursor: pointer;
@@ -145,7 +143,16 @@ footer {
         @media (min-width: $desktop) {
           padding: 0;
           border-bottom: 0;
-          flex-direction: column;
+        }
+
+        nav {
+          @media (max-width: $desktop) {
+            padding-top: 2.5rem;
+          }
+        }
+        .mobile-title {
+          display: flex;
+          justify-content: space-between;
         }
       }
     }
