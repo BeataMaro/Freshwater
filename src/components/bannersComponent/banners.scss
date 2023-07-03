@@ -1,0 +1,87 @@
+.banners {
+  .categories {
+    @extend .center;
+    flex-direction: column;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      column-gap: 0.94rem;
+    }
+
+    .category {
+      position: relative;
+      margin-bottom: 1.25rem;
+      cursor: pointer;
+
+      @media (min-width: $desktop) {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        position: absolute;
+        bottom: 0.94rem;
+        right: 0.9rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        @media (min-width: $desktop) {
+          bottom: 1.25rem;
+          right: 1.56rem;
+        }
+      }
+    }
+  }
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2.2rem 0 1.25rem;
+
+    @media (min-width: $desktop) {
+      font-size: 1.6rem;
+      margin: 3.75rem 0 1.4rem;
+    }
+  }
+  .category-buttons {
+    display: grid;
+    place-items: center;
+    gap: 1.56rem;
+
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+      column-gap: 1.25rem;
+    }
+
+    button {
+      background-color: $blue;
+      color: white;
+      border-radius: 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+
+      @media (min-width: $desktop) {
+        font-size: 1rem;
+      }
+
+      &:nth-of-type(1) {
+        width: 101px;
+        height: 37px;
+        @media (min-width: $desktop) {
+          width: 180px;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 291px;
+        height: 37px;
+
+        @media (min-width: $desktop) {
+          width: 325px;
+        }
+      }
+    }
+  }
+}

@@ -165,6 +165,7 @@ header {
         width: 90vw;
         margin-left: auto;
         box-shadow: 0 -2px 4px rgba(0,0,0,.25);
+        cursor: pointer;
 
         @media (min-width: $desktop) {
           margin-left: 0;
