@@ -3,6 +3,7 @@
 @import './components/headerComponent/header.scss';
 @import './components/heroComponent/hero.scss';
 @import './components/bannersComponent/banners.scss';
+@import './components/blogComponent/blog.scss';
 @import './components/newsletterComponent/newsletter.scss';
 @import './components/footerComponent/footer.scss';
 
@@ -47,7 +48,7 @@ body {
 
   &.open nav .products-menu li {
     color: $blue;
-    border-bottom: 1px solid #eceef3;
+    border-bottom: 1px solid $lightgrey;
   }
 
   .desktop {
@@ -66,7 +67,7 @@ body {
 
   aside {
     width: 100vw;
-    background-color: #eff0f5;
+    background-color: $lightgrey;
     padding: 0.5rem 18vw;
     margin-bottom: 1.44rem;
     text-align: center;

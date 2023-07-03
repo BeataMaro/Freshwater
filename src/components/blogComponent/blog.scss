@@ -1,0 +1,58 @@
+.blog {
+  text-align: center;
+  padding: 3.1rem 0.94rem 3rem;
+  background-color: $lightgrey;
+
+  @media (min-width: $desktop) {
+    padding: 8rem 0;
+  }
+
+  header {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      @media (min-width: $desktop) {
+        font-size: 1.9rem;
+      }
+    }
+
+    span {
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+  }
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+    }
+    .blog-card {
+      cursor: pointer;
+      display: grid;
+      text-align: center;
+
+      @media (max-width: $desktop) {
+        place-items: center;
+      }
+
+      @media (min-width: $desktop) {
+        text-align: left;
+        margin-top: 1.6rem;
+      }
+
+      img {
+        margin: 0.625rem 0 1.25rem;
+      }
+      h4 {
+        font-weight: 800;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
