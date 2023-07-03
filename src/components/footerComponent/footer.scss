@@ -4,66 +4,103 @@ footer {
     flex-direction: column;
     color: white;
     background-color: $grey;
-    padding: 35px 58px;
+    padding: 2.2rem 3.6rem;
 
     @media (min-width: $desktop) {
       flex-direction: row;
-      padding: 2.75rem 22.5rem;
+      padding: 2.6rem 21.8rem;
     }
 
     .container {
       @media (min-width: $desktop) {
-        margin-right: 3.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.625rem;
+
+        @media (min-width: $desktop) {
+          margin-bottom: 1.3rem;
+        }
+      }
+
+      nav ul li {
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-bottom: 0.94rem;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: $blue;
+        }
+
+        @media (min-width: $desktop) {
+          margin-bottom: 0.625rem;
+        }
       }
       .footer-logo {
         display: flex;
         justify-content: center;
 
+        @media (min-width: $desktop) {
+          margin-right: 6.3rem;
+        }
         h3 {
           font-size: 2.5rem;
+          font-weight: 400;
 
           @media (min-width: $desktop) {
             font-size: 2rem;
+            letter-spacing: -1px;
           }
         }
-
         img {
           width: 47px;
           height: 47px;
           margin-right: 0.625rem;
+
+          @media (min-width: $desktop) {
+            width: 36px;
+            height: 36px;
+          }
         }
       }
       .social-media {
-        @extend .center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 0.94rem;
         margin: 2.2rem 0;
 
         @media (min-width: $desktop) {
           justify-content: flex-start;
-          display: none;
+          align-items: flex-end;
         }
       }
       .contact {
         margin-bottom: 2.2rem;
         text-align: center;
         display: grid;
-        gap: 0.94rem;
 
         @media (min-width: $desktop) {
           text-align: start;
+          margin-right: 3.8rem;
         }
 
         .phone {
           img {
-            margin-right: 0.8rem;
+            margin-right: 0.75rem;
           }
 
           strong {
             font-size: 1.6rem;
             font-weight: 700;
+            letter-spacing: -0.5px;
           }
         }
         .hours {
@@ -71,6 +108,11 @@ footer {
           font-weight: 400;
         }
         .email {
+          h4 {
+            @media (min-width: $desktop) {
+              margin-top: 1.6rem;
+            }
+          }
           strong {
             font-weight: 400;
           }
@@ -83,23 +125,14 @@ footer {
 
         @media (min-width: $desktop) {
           border: 0;
+          padding: 0;
+          margin-right: 3.5rem;
         }
-        h4 {
-          font-size: 1rem;
-          font-weight: 700;
-          margin-bottom: 0.625rem;
-        }
-        ul {
-          li {
-            font-size: 0.875rem;
-            cursor: pointer;
-            margin-bottom: 0.94rem;
-            transition: 0.3s ease;
+      }
 
-            &:hover {
-              color: $blue;
-            }
-          }
+      .my-account {
+        @media (min-width: $desktop) {
+          margin-right: 4.9rem;
         }
       }
       .extensible {
@@ -110,26 +143,9 @@ footer {
         cursor: pointer;
 
         @media (min-width: $desktop) {
+          padding: 0;
           border-bottom: 0;
           flex-direction: column;
-        }
-
-        h4 {
-          font-size: 1rem;
-          font-weight: 700;
-          margin-bottom: 0.625rem;
-        }
-
-        nav ul li {
-          font-size: 0.875rem;
-          font-weight: 400;
-          margin-bottom: 0.94rem;
-          transition: 0.3s ease;
-          cursor: pointer;
-
-          &:hover {
-            color: $blue;
-          }
         }
       }
     }
@@ -142,12 +158,25 @@ footer {
 
     @media (min-width: $desktop) {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      padding: 1.2rem 20rem;
+    }
+
+    img {
+      order: 1;
+      @media (min-width: $desktop) {
+        order: 2;
+      }
     }
     strong {
-      font-size: 0.875rem;
+      order: 2;
+      font-size: 0.75rem;
       font-weight: 400;
       margin-top: 0.625rem;
+
+      @media (min-width: $desktop) {
+        order: 1;
+      }
     }
   }
 }

@@ -198,10 +198,13 @@
               <input type="text" name="newsletterEmail" placeholder="Twój email" />
               <div class="terms">
                 <input type="checkbox" id="agreement" value="agreement" />
-                <label for="agreement"
+                <label for="agreement" class="desktop"
                   >Chcę otrzymywać E-mail Newsletter. Wyrażam zgodę na przetwarzanie moich danych
                   osobowych do celów<br />
                   marketingowych zgodnie z polityką prywatności</label
+                >
+                <label for="agreement" class="mobile"
+                  >Wyrażam zgodę na przetwarzanie moich danych zgodnie z polityką prywatności</label
                 >
               </div>
               <button type="submit" class="submit-button">Zapisz się</button>
@@ -218,10 +221,8 @@
               <h3>Freshwater</h3>
             </div>
             <div class="social-media">
-              <img src="./images/facebook-logo.svg" alt="Facebook" /><img
-                src="./images/instagram-logo.svg"
-                alt="Instagram"
-              />
+              <img src="./images/facebook-logo.svg" alt="Facebook" />
+              <img src="./images/instagram-logo.svg" alt="Instagram" />
             </div>
           </div>
           <div class="container">
@@ -233,22 +234,25 @@
               </div>
               <div class="hours">
                 <p>Od poniedziałku do piątku</p>
-                <p>w godzinach 09:00-17:00</p>
+                <p class="mobile">w godzinach 09:00-17:00</p>
+                <p class="desktop">w godzinach 08:00-16:00</p>
               </div>
               <div class="email">
                 <h4>Email</h4>
-                <strong>kontakt@filtreo.pl</strong>
+                <strong class="mobile">kontakt@filtreo.pl</strong>
+                <strong class="desktop">kontakt@freshwater.pl</strong>
               </div>
             </article>
           </div>
           <div class="container">
             <article class="order">
-              <h4>Moje zamówienie</h4>
+              <h4 class="mobile">Moje zamówienie</h4>
+              <h4 class="desktop">Moje zamówienia</h4>
               <nav>
                 <ul>
                   <li>Status zamówienia</li>
-                  <li>Śledzenie przesyłki</li>
-                  <li>Chcę reklamować towar</li>
+                  <li class="mobile">Śledzenie przesyłki</li>
+                  <li>Chcę zareklamować <span class="mobile">towar</span></li>
                   <li>Chcę zwrócić towar</li>
                 </ul>
               </nav>
