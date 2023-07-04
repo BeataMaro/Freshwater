@@ -1,4 +1,4 @@
-### Freshwater responsive website
+## Freshwater responsive website
 
 [Site demo](https://freshwater-site.netlify.app/)
 
