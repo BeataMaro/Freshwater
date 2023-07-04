@@ -7,10 +7,8 @@ module.exports = {
   mode: 'production',
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    // filename: '[name].[contenthash].js',
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist'),
-    // publicPath: '/dist/',
     publicPath: './',
     assetModuleFilename: 'images/[hash][ext][query]',
     clean: true,
@@ -33,10 +31,6 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
-      // {
-      //   test: /\.(css)$/,
-      //   use: ['style-loader', 'css-loader'],
-      // },
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', "postcss-loader", 'sass-loader'],
