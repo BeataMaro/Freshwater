@@ -1,6 +1,116 @@
-.hero-slider {
-  margin-top: 10px;
+.hero {
   width: 100%;
-  height: 30rem;
-//   border: 1px solid springgreen;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @media (min-width: $desktop) {
+    padding: 0 20vw;
+  }
+
+  .hero-slider {
+    @extend .center;
+    flex-direction: column;
+
+    &-navigation {
+      display: flex;
+      span {
+        background-color: $grey;
+        border-radius: 50%;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: 1rem;
+        margin-right: 0.4rem;
+        cursor: pointer;
+
+        &:nth-of-type(1) {
+          width: 1.6rem;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .hero-slide {
+      display: grid;
+      place-items: center;
+      width: 100%;
+
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      &-text {
+        display: grid;
+        place-items: center;
+        order: 2;
+
+        @media (min-width: $desktop) {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          padding-top: 5rem;
+          padding-left: 3.5rem;
+          order: 1;
+        }
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 1.25rem;
+          line-height: 2.6rem;
+        }
+
+        button {
+          @extend .grey-button;
+          width: 8rem;
+          height: 2.3rem;
+          margin: 1rem 0;
+
+          @media (min-width: $desktop) {
+            width: 10rem;
+          }
+        }
+      }
+      &-image {
+        position: relative;
+        width: 50%;
+        height: 27rem;
+        order: 1;
+
+        @media (min-width: $desktop) {
+          order: 2;
+        }
+
+        &::before {
+          content: '';
+          background-image: url('./images/water-circle.png');
+          background-repeat: no-repeat;
+          display: inline-block;
+          background-size: 30rem 25rem;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 3%;
+          left: 17%;
+
+          @media (max-width: $desktop) {
+            display: none;
+          }
+        }
+        &::after {
+          content: '';
+          background-image: url('./images/filters.png');
+          background-repeat: no-repeat;
+          display: inline-block;
+          background-size: 35rem 35rem;
+          position: absolute;
+          top: 0;
+          left: 15%;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
 }

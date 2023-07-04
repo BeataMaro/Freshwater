@@ -2,6 +2,7 @@
 @import './variables.scss';
 @import './components/headerComponent/header.scss';
 @import './components/heroComponent/hero.scss';
+@import './components/productsComponent/products.scss';
 @import './components/bannersComponent/banners.scss';
 @import './components/blogComponent/blog.scss';
 @import './components/newsletterComponent/newsletter.scss';
@@ -31,6 +32,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.grey-button {
+  background-color: $grey;
+  color: white;
+  font-weight: 700;
+  border-radius: 100px;
+  padding: 0.5rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 body {
