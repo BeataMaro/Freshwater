@@ -5,12 +5,12 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/dist/',
-    publicPath: '/dist',
+    // filename: '[name].[contenthash].js',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
     assetModuleFilename: 'images/[hash][ext][query]',
     clean: true,
   },
@@ -32,17 +32,21 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
-      // {
-      //   test: /\.(css)$/,
-      //   use: ['style-loader', 'css-loader'],
-      // },
+      {
+        test: /\.(css)$/,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /images\/\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/inline',
       },
     ],
   },
