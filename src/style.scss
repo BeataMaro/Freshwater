@@ -109,7 +109,8 @@ body {
 
       @media (min-width: $desktop) {
         display: flex;
-        margin-right: 1.8rem;
+        // margin-right: 1.8rem;
+        padding: 1.3rem;
       }
 
       & .benefits-icon {
@@ -124,7 +125,7 @@ body {
       strong {
         display: flex;
         font-size: 0.875rem;
-        font-weight: 700;
+        font-weight: 600;
         text-align: center;
 
         span {

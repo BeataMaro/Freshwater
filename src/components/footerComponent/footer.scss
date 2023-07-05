@@ -8,7 +8,7 @@ footer {
 
     @media (min-width: $desktop) {
       flex-direction: row;
-      padding: 2.6rem 21.8rem;
+      padding: 2.6rem 21.8rem 2rem;
     }
 
     .container {
@@ -16,6 +16,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-left: .2rem;
       }
 
       h4 {
@@ -48,7 +49,8 @@ footer {
         justify-content: center;
 
         @media (min-width: $desktop) {
-          margin-right: 6.3rem;
+          margin-right: 6rem;
+          padding-left: .5rem;
         }
         h3 {
           font-size: 2.5rem;
@@ -80,7 +82,9 @@ footer {
 
         @media (min-width: $desktop) {
           justify-content: flex-start;
-          align-items: flex-end;
+          margin-top: 0;
+          margin-left: .5rem;
+          margin-bottom: 3rem;
         }
       }
       .contact {
@@ -91,6 +95,10 @@ footer {
         @media (min-width: $desktop) {
           text-align: start;
           margin-right: 3.8rem;
+        }
+
+        h4 {
+          margin-bottom: 1rem;
         }
 
         .phone {
@@ -167,20 +175,20 @@ footer {
     @media (min-width: $desktop) {
       display: flex;
       justify-content: space-between;
-      padding: 1.2rem 20rem;
+      padding: .4rem 19vw;
     }
 
     img {
       order: 1;
       @media (min-width: $desktop) {
         order: 2;
+        margin-right: -2rem;
       }
     }
     strong {
       order: 2;
       font-size: 0.75rem;
       font-weight: 400;
-      margin-top: 0.625rem;
 
       @media (min-width: $desktop) {
         order: 1;

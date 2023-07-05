@@ -4,7 +4,7 @@
   background-color: $lightgrey;
 
   @media (min-width: $desktop) {
-    padding: 8rem 0;
+    padding: 5rem 0;
   }
 
   header {
@@ -31,6 +31,7 @@
 
     @media (min-width: $desktop) {
       flex-direction: row;
+      margin-left: 1rem;
     }
     .blog-card {
       cursor: pointer;
@@ -43,11 +44,11 @@
 
       @media (min-width: $desktop) {
         text-align: left;
-        margin-top: 1.6rem;
+        margin-top: 1.4rem;
       }
 
       img {
-        margin: 0.625rem 0 1.25rem;
+        margin: 0.625rem 0 .9rem;
       }
       h4 {
         font-weight: 800;

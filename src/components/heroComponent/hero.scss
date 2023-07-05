@@ -5,6 +5,7 @@
 
   @media (min-width: $desktop) {
     padding: 0 20vw;
+    margin-bottom: 1.8rem;
   }
 
   .hero-slider {
@@ -13,6 +14,9 @@
 
     &-navigation {
       display: flex;
+      align-items: flex-start;
+      margin-top: -2rem;
+
       span {
         background-color: $grey;
         border-radius: 50%;
@@ -22,7 +26,7 @@
         margin-right: 0.4rem;
         cursor: pointer;
 
-        &:nth-of-type(1) {
+        &.active {
           width: 1.6rem;
           border-radius: 10px;
         }
@@ -36,7 +40,8 @@
 
       @media (min-width: $desktop) {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        padding: .4rem 3.3rem;
       }
 
       &-text {
@@ -47,28 +52,40 @@
         @media (min-width: $desktop) {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          justify-content: flex-start;
           text-align: left;
-          padding-top: 5rem;
-          padding-left: 3.5rem;
           order: 1;
         }
 
         h2 {
           font-size: 2rem;
-          font-weight: 700;
-          margin-bottom: 1.25rem;
-          line-height: 2.6rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          line-height: 2.2rem;
+          letter-spacing: -1px;
+          
+          strong {
+            font-weight: 600;
+          }
+        }
+
+        span {
+
+          @media (min-width: $desktop) {
+            align-self: flex-start;
+          }
         }
 
         button {
           @extend .grey-button;
           width: 8rem;
-          height: 2.3rem;
-          margin: 1rem 0;
+          height: 2.2rem;
+          margin: 1.2rem 0;
 
           @media (min-width: $desktop) {
-            width: 10rem;
+            width: 11rem;
+            align-self: flex-start;
+
           }
         }
       }
@@ -92,7 +109,7 @@
           height: 100%;
           position: absolute;
           top: 3%;
-          left: 17%;
+          left: 10%;
 
           @media (max-width: $desktop) {
             display: none;
@@ -105,8 +122,8 @@
           display: inline-block;
           background-size: 35rem 35rem;
           position: absolute;
-          top: 0;
-          left: 15%;
+          top: -2%;
+          left: 13%;
           width: 100%;
           height: 100%;
         }
