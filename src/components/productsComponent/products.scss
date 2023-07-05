@@ -11,25 +11,39 @@
   }
 
   .slider {
-    display: flex;
+    position: relative;
+    overflow: hidden;
     .arrow {
       cursor: pointer;
-      
+
       // arrow prev
       &:nth-of-type(1) {
-        margin-left: -2rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
       }
       // arrow next
       &:nth-of-type(2) {
-        margin-right: -3rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
       }
     }
-    .products-slider {
+    .slides-container {
       display: flex;
-      overflow: hidden;
-      margin: 0 2.5rem;
-      
-      &-card {
+      margin: 0;
+      padding: 0;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      .slide {
         height: 25rem;
         display: flex;
         flex-direction: column;

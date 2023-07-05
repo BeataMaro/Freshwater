@@ -11,7 +11,7 @@
         <p>Tylko dzisiaj!&nbsp;Darmowa&nbsp;dostawa dla&nbsp;zamówień&nbsp;od&nbsp;100zł</p>
       </aside>
       <header>
-        <div class="row-up">
+        <div class="row-top">
           <a href="/">
             <div class="logo">
               <img src="./images/logo-icon.svg" alt="Freshwater logo icon" class="logo-icon" />
@@ -173,8 +173,54 @@
               </div>
               <div class="hero-slide-image"></div>
             </li>
-            <div class="hero-slider-navigation">
-              <span class="active"></span><span></span><span></span><span></span>
+            <li class="hero-slide">
+              <div class="hero-slide-text">
+                <h2>
+                  Filtr wody Waterfresh<br />
+                  AquaClean CA6903/00<br />do ekspresów <strong>Saeco</strong> i&nbsp;<strong
+                    >Philips</strong
+                  >
+                </h2>
+                <span
+                  >Oryginalny. Sprawdź również tańszy,<br />
+                  ale sprawdzony zamiennik.</span
+                >
+                <button>Kup teraz</button>
+              </div>
+              <div class="hero-slide-image" id="hero-slide-image"></div>
+            </li>
+            <li class="hero-slide">
+              <div class="hero-slide-text">
+                <h2>
+                  Filtr Seltino Ocea<br />
+                  zamiennik do Philips Saeco CA6903
+                </h2>
+                <span>Oryginalny</span>
+                <button>Kup teraz</button>
+              </div>
+              <div class="hero-slide-image"></div>
+            </li>
+            <li class="hero-slide">
+              <div class="hero-slide-text">
+                <h2>
+                  Filtr wody Saeco<br />
+                  AquaClean CA6903/00<br />do ekspresów <strong>Saeco</strong> i&nbsp;<strong
+                    >Philips</strong
+                  >
+                </h2>
+                <span
+                  >Sprawdź również tańszy,<br />
+                  ale sprawdzony zamiennik.</span
+                >
+                <button>Kup teraz</button>
+              </div>
+              <div class="hero-slide-image"></div>
+            </li>
+            <div class="hero-carousel-controls">
+              <button class="hero-carousel-nav active" data-slide-index="0"></button>
+              <button class="hero-carousel-nav" data-slide-index="1"></button>
+              <button class="hero-carousel-nav" data-slide-index="2"></button>
+              <button class="hero-carousel-nav" data-slide-index="3"></button>
             </div>
           </ul>
         </section>
@@ -216,8 +262,8 @@
               id="prev-product"
               class="arrow"
             />
-            <article class="products-slider">
-              <div class="products-slider-card">
+            <ul class="slides-container" id="slides-container">
+              <li class="slide">
                 <img
                   src="./images/pol_il_Tabletki-czyszczace-do-ekspresu-Siemens-Bosch-TZ80001-2w1-oryginal-171.jpg"
                   alt="Tabletki-czyszczace-do-ekspresu-Siemens-Bosch"
@@ -233,8 +279,8 @@
                     <img src="./images/white-shopping-cart.svg" alt="shopping cart" />
                   </button>
                 </div>
-              </div>
-              <div class="products-slider-card">
+              </li>
+              <li class="slide">
                 <img
                   src="./images/pol_il_3x-Filtr-Seltino-Ocea-zamiennik-do-Philips-Saeco-CA6903-AquaClean-259.jpg"
                   alt="Filtr-Seltino-Ocea-zamiennik-do-Philips-Saeco"
@@ -250,8 +296,8 @@
                     <img src="./images/white-shopping-cart.svg" alt="shopping cart" />
                   </button>
                 </div>
-              </div>
-              <div class="products-slider-card">
+              </li>
+              <li class="slide">
                 <img
                   src="./images/pol_il_2x-Filtr-Seltino-SBH-Ultra-zamiennik-do-Ultra-Clarity-644845-375.jpg"
                   alt="Filtr-Seltino-SBH-Ultra-zamiennik-do-Ultra-Clarity"
@@ -267,9 +313,9 @@
                     <img src="./images/white-shopping-cart.svg" alt="shopping cart" />
                   </button>
                 </div>
-              </div>
+              </li>
 
-              <div class="products-slider-card">
+              <li class="slide">
                 <img
                   src="./images/pol_il_ZESTAW-2x-Odkamieniacz-Seltino-Entkalker-1000-ml-szczoteczka-365.jpg"
                   alt="ZESTAW-2x-Odkamieniacz-Seltino-Entkalker-1000-ml"
@@ -285,8 +331,8 @@
                     <img src="./images/white-shopping-cart.svg" alt="shopping cart" />
                   </button>
                 </div>
-              </div>
-              <div class="products-slider-card">
+              </li>
+              <li class="slide">
                 <img
                   src="./images/Zestaw Filtr do ekspresow DeLonghi.jpg"
                   alt="Zestaw Filtr do ekspresow DeLonghi"
@@ -306,9 +352,9 @@
                     <img src="./images/white-shopping-cart.svg" alt="shopping cart" />
                   </button>
                 </div>
-              </div>
-              <div class="products-slider-card">
-                <img src="./images/products-image6.jpg" alt="Philips" />
+              </li>
+              <li class="slide">
+                <img src="./images/Philips.jpg" alt="Philips" />
                 <h5>
                   DWUPAK ! - Filtr wody<br />
                   Saeco AquaClean<br />
@@ -323,8 +369,8 @@
                     <img src="./images/white-shopping-cart.svg" alt="shopping cart" />
                   </button>
                 </div>
-              </div>
-            </article>
+              </li>
+            </ul>
             <img
               src="./images/black-arrow-right.svg"
               alt="next arrow"

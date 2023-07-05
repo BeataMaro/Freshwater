@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
@@ -6,6 +8,29 @@
   @media (min-width: $desktop) {
     padding: 0 20vw;
     margin-bottom: 1.8rem;
+  }
+
+  .hero-carousel-controls {
+    display: flex;
+    align-items: flex-start;
+    margin-top: -2rem;
+    cursor: pointer;
+    z-index: 100;
+
+    .hero-carousel-nav {
+      display: inline-block;
+      background-color: $grey;
+      border-radius: 50%;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-top: 1rem;
+      margin-right: 0.4rem;
+      cursor: pointer;
+      &.active {
+        width: 1.6rem;
+        border-radius: 10px;
+      }
+    }
   }
 
   .hero-slider {
@@ -16,8 +41,11 @@
       display: flex;
       align-items: flex-start;
       margin-top: -2rem;
+      cursor: pointer;
+      z-index: 100;
 
       span {
+        display: inline-block;
         background-color: $grey;
         border-radius: 50%;
         width: 0.5rem;
@@ -37,11 +65,17 @@
       display: grid;
       place-items: center;
       width: 100%;
+      height: 100%;
+      display: none;
 
-      @media (min-width: $desktop) {
-        display: flex;
-        justify-content: space-evenly;
-        padding: .4rem 3.3rem;
+      & + .active {
+        display: block;
+
+        @media (min-width: $desktop) {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 0.4rem 3.3rem;
+        }
       }
 
       &-text {
@@ -63,14 +97,13 @@
           margin-bottom: 1rem;
           line-height: 2.2rem;
           letter-spacing: -1px;
-          
+
           strong {
             font-weight: 600;
           }
         }
 
         span {
-
           @media (min-width: $desktop) {
             align-self: flex-start;
           }
@@ -85,7 +118,6 @@
           @media (min-width: $desktop) {
             width: 11rem;
             align-self: flex-start;
-
           }
         }
       }
