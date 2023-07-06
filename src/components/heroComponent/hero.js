@@ -5,8 +5,6 @@ const carouselImages = carousel.getElementsByTagName('li');
 const carouselNavButtons = document.querySelectorAll('.hero-carousel-nav');
 let currentIndex = 0;
 
-const heroSlideImage = document.getElementById('hero-slide-image');
-
 // Show the current slide and hide the rest
 function showSlide(index) {
   [...carouselImages].map((image) => image.classList.remove('active'));
@@ -14,6 +12,7 @@ function showSlide(index) {
 
   [...carouselNavButtons].map((dot) => dot.classList.remove('active'));
   carouselNavButtons[index].classList.add('active');
+
 }
 
 function nextSlide() {
@@ -25,7 +24,7 @@ function nextSlide() {
 }
 
 // Automatic slide change
-let slideInterval = setInterval(nextSlide, 5000);
+let slideInterval = setInterval(nextSlide, 3000);
 
 // Event listener for navigation buttons
 [...carouselNavButtons].forEach((button) => {
