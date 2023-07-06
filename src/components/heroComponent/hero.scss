@@ -1,4 +1,15 @@
+.absolutePseudo {
+  content: '';
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .hero {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
@@ -12,36 +23,20 @@
     @extend .center;
     flex-direction: column;
 
-    &-navigation {
-      display: flex;
-      align-items: flex-start;
-      margin-top: -2rem;
-
-      span {
-        background-color: $grey;
-        border-radius: 50%;
-        width: 0.5rem;
-        height: 0.5rem;
-        margin-top: 1rem;
-        margin-right: 0.4rem;
-        cursor: pointer;
-
-        &.active {
-          width: 1.6rem;
-          border-radius: 10px;
-        }
-      }
-    }
-
     .hero-slide {
-      display: grid;
       place-items: center;
       width: 100%;
+      height: 100%;
+      display: none;
 
-      @media (min-width: $desktop) {
-        display: flex;
-        justify-content: space-evenly;
-        padding: .4rem 3.3rem;
+      &.active {
+        display: grid;
+
+        @media (min-width: $desktop) {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 0.4rem 3.3rem;
+        }
       }
 
       &-text {
@@ -60,17 +55,20 @@
         h2 {
           font-size: 2rem;
           font-weight: 600;
-          margin-bottom: 1rem;
+          margin: 1rem 0;
           line-height: 2.2rem;
           letter-spacing: -1px;
-          
+
+          @media (min-width: $desktop) {
+            margin: 0 0 1rem 0
+          }
+
           strong {
             font-weight: 600;
           }
         }
 
         span {
-
           @media (min-width: $desktop) {
             align-self: flex-start;
           }
@@ -85,47 +83,93 @@
           @media (min-width: $desktop) {
             width: 11rem;
             align-self: flex-start;
-
           }
         }
       }
       &-image {
         position: relative;
-        width: 50%;
-        height: 27rem;
+        width: 100%;
+        height: 23rem;
         order: 1;
 
         @media (min-width: $desktop) {
           order: 2;
+          width: 50%;
+          height: 27rem;
         }
 
         &::before {
-          content: '';
-          background-image: url('./images/water-circle.png');
-          background-repeat: no-repeat;
-          display: inline-block;
-          background-size: 30rem 25rem;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 3%;
-          left: 10%;
-
           @media (max-width: $desktop) {
             display: none;
           }
+          @extend .absolutePseudo;
+          background-image: url('./images/water-circle.png');
+          top: 3%;
+          left: 10%;
+          background-size: 30rem 25rem;
         }
         &::after {
-          content: '';
           background-image: url('./images/filters.png');
-          background-repeat: no-repeat;
-          display: inline-block;
-          background-size: 35rem 35rem;
-          position: absolute;
-          top: -2%;
-          left: 13%;
-          width: 100%;
-          height: 100%;
+          background-size: 30rem 30rem;
+          top: 0;
+          left: 0;
+          @extend .absolutePseudo;
+
+          @media (max-width: $desktop) {
+            background-position: center;
+          }
+          @media (min-width: $desktop) {
+            top: -2%;
+            left: 13%;
+            background-size: 35rem 35rem;
+          }
+        }
+      }
+
+      &-image-2::before,
+      &-image-3::before,
+      &-image-4::before {
+        display: none;
+      }
+      &-image-2::after,
+      &-image-3::after,
+      &-image-4::after {
+        background-position: center;
+        background-size: 20rem 20rem;
+      }
+
+      &-image-2::after {
+        background-image: url('./images/blog-image1.jpg');
+      }
+      &-image-3::after {
+        background-image: url('./images/blog-image2.jpg');
+      }
+      &-image-4::after {
+        background-image: url('./images/blog-image3.jpg');
+      }
+    }
+
+    // navigation
+    .hero-slide-controls {
+      padding-top: 1rem;
+      display: flex;
+      align-items: flex-start;
+      margin-top: -2rem;
+      cursor: pointer;
+      z-index: 100;
+
+      .hero-carousel-nav {
+        display: inline-block;
+        background-color: $grey;
+        border-radius: 50%;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: 1rem;
+        margin-right: 0.4rem;
+        cursor: pointer;
+        &.active {
+          width: 1.6rem;
+          border-radius: 10px;
         }
       }
     }
