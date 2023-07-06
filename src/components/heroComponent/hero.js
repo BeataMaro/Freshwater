@@ -12,7 +12,6 @@ function showSlide(index) {
 
   [...carouselNavButtons].map((dot) => dot.classList.remove('active'));
   carouselNavButtons[index].classList.add('active');
-
 }
 
 function nextSlide() {
