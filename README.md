@@ -22,7 +22,11 @@ Install the project dependencies using npm:
 npm install
 ```
 ### Usage
-To run the Freshwater website locally, you can use the following command:
+To run the Freshwater website locally, you can use the following commands:
+
+```
+npm run build
+```
 
 ```
 npm run dev
@@ -30,7 +34,4 @@ npm run dev
 
 This command will start a local development server and automatically open the website in your default browser. Any changes you make to the HTML, JavaScript, or SCSS files will be automatically reflected in the browser.
 
-### Deploy
-```
-npm run build
-```
+
