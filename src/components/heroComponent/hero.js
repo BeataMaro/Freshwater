@@ -31,7 +31,7 @@ navButtons.addEventListener('click', (e) => {
   let target = e.target;
 
   if (target.tagName === 'BUTTON') {
-    const slideIndex = parseInt(target.getAttribute('data-slide-index'));
+    const slideIndex = parseInt(target.dataset.slideIndex);
     clearInterval(slideInterval);
     currentIndex = slideIndex;
     showSlide(currentIndex);
